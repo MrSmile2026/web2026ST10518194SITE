@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="40" viewBox="0 0 150 40">
+<rect width="34" height="34" x="3" y="3" rx="8" fill="#123C69"/>
+<path d="M13 12 L13 28 M13 20 L24 12 M13 20 L24 28" stroke="#4FD1C5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<text x="44" y="27" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#123C69">KO Tech</text>
+</svg>
