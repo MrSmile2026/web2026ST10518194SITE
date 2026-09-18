@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title> All Products - KO TECH</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<meta content="KO TECH technology store — All Products - KO TECH." name="description"/></head>
+<body>
+<div class="header">
+<div class="contaniner">
+<div class="navbar">
+<div class="logo">
+<a href="1Index.html"><img alt="KO TECH logo" src="Images/logo.jpg" width="150px"/></a>
+</div>
+<nav aria-label="Primary navigation" class="site-nav"><ul class="primary-links" id="MenuItems"><li><a href="1Index.html">Home</a></li><li><a aria-current="page" class="active-link" href="Product.html">Products</a></li><li><a href="Deals.html">Deals</a></li><li><a href="About.html">About</a></li><li><a href="Contact.html">Contact</a></li></ul></nav>
+<a class="header-icon-link" href="Track-Order.html" title="Track Order"><i class="fa fa-map-marker"></i></a>
+<a class="header-icon-link" href="Login.html" id="accountLink" title="Sign In"><i class="fa fa-user-circle-o"></i></a>
+<a class="header-icon-link" href="Wishlist.html" title="Wishlist"><img alt="Wishlist" height="26px" src="Images/heart icon.jpg" width="26px"/></a>
+<a class="header-icon-link" href="Cart.html" title="Cart"><img alt="Shopping cart" height="30px" src="Images/cart-.jpg" width="30px"/></a>
+<input class="menu-toggle" id="allPagesMenuToggle" type="checkbox" aria-label="Show menu"/>
+<label class="menu-icon" for="allPagesMenuToggle" aria-label="Show menu">☰</label>
+<div class="all-pages-menu" id="allPagesMenu"><div class="all-pages-heading">All Website Pages</div><div class="all-pages-grid"><a href="1Index.html">Home</a><a aria-current="page" class="current-page" href="Product.html">Products</a><a href="PRODUCT NEW.html">New Products</a><a href="Product-Details.html">Product Details</a><a href="Deals.html">Deals</a><a href="Wishlist.html">Wishlist</a><a href="Cart.html">Cart</a><a href="Checkout.html">Checkout</a><a href="Order-Confirmation.html">Order Confirmation</a><a href="Track-Order.html">Track Order</a><a href="Payment-Methods.html">Payment Methods</a><a href="Reviews.html">Reviews</a><a href="About.html">About</a><a href="Contact.html">Contact</a><a href="Account.html">My Account</a><a href="Login.html">Sign In</a><a href="Register.html">Register</a></div></div></div>
+</div>
+</div>
+<div class="small-contain">
+<div class="row row-2">
+<h2>All Products</h2>
+<select id="sortSelect">
+<option value="default">Default Shorting</option>
+<option value="price-asc">Short by price: Low to High</option>
+<option value="price-desc">Short by price: High to Low</option>
+<option value="popularity">Short by popularity</option>
+<option value="rating">Short by rating</option>
+<option value="sale">Short by sale</option>
+</select>
+</div>
+<div class="filter-bar" id="filterBar">
+<button aria-controls="filterPanel" aria-expanded="false" class="filter-toggle" id="filterToggle" type="button">
+<i class="fa fa-sliders" aria-hidden="true"></i> Filter
+</button>
+<div class="active-filter-chips" id="activeFilterChips"></div>
+<span class="results-count" id="resultsCount"></span>
+</div>
+<div class="filter-panel" id="filterPanel">
+<div class="filter-group">
+<h5>Category</h5>
+<label><input type="checkbox" name="category" value="Accessories"/> Accessories</label>
+<label><input type="checkbox" name="category" value="Computers"/> Computers</label>
+<label><input type="checkbox" name="category" value="Headphones"/> Headphones</label>
+<label><input type="checkbox" name="category" value="Earpods"/> Earpods</label>
+<label><input type="checkbox" name="category" value="Gaming"/> Gaming</label>
+<label><input type="checkbox" name="category" value="Smartphones"/> Smartphones</label>
+<label><input type="checkbox" name="category" value="Watches"/> Watches</label>
+</div>
+<div class="filter-group">
+<h5>Price Range (R)</h5>
+<div class="price-range-inputs">
+<input aria-label="Minimum price" id="priceMin" min="0" placeholder="Min" type="number"/>
+<span>–</span>
+<input aria-label="Maximum price" id="priceMax" min="0" placeholder="Max" type="number"/>
+</div>
+</div>
+<div class="filter-group">
+<h5>Minimum Rating</h5>
+<label><input checked="checked" name="rating" type="radio" value="0"/> Any rating</label>
+<label><input name="rating" type="radio" value="4"/> 4 stars &amp; up</label>
+<label><input name="rating" type="radio" value="3"/> 3 stars &amp; up</label>
+<label><input name="rating" type="radio" value="2"/> 2 stars &amp; up</label>
+</div>
+<div class="filter-group">
+<h5>Offers</h5>
+<label><input id="onSaleOnly" type="checkbox"/> On sale only</label>
+</div>
+<div class="filter-actions">
+<button class="btn" id="applyFilters" type="button">Apply Filters</button>
+<button class="btn-clear" id="clearFilters" type="button">Clear All</button>
+</div>
+</div>
+</div>
+<!------------------first row---------------->
+<div class="row product-list" id="productsGrid"><div class="col-4 product-card" data-category="Accessories" data-discount="10" data-popularity="41" data-price="2000.00" data-rating="4.0">
+<img alt="vrurc 10000mah power bank built in cables, portable charger with led display, sl" height="380px" src="Images/accessories/product_image_08.jpg" width="40px"/>
+<h4>VRURC 10000mAh Power Bank Built-in Cables </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R2 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="39" data-price="4900.00" data-rating="4.5">
+<img alt="this led cube bluetooth speaker has style" src="Images/accessories/This LED Cube Bluetooth Speaker has Style.jpg" width="250px"/>
+<h4>LED Cube Bluetooth Speaker </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R4 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="40" data-popularity="376" data-price="2900.00" data-rating="4.5">
+<img alt="the 28 best tech gifts are perfect for anyone on your list" src="Images/accessories/The 28 Best Tech Gifts Are Perfect for Anyone on Your List.jpg" width="250px"/>
+<h4>28 Best Tech </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R2 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="479" data-price="2900.00" data-rating="4.5">
+<img alt="new product" height="380px" src="Images/accessories/new product.avif" width="40px"/>
+<h4>Ulanzi V6 Wireless Lavalier Microphone System </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R2 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="30" data-popularity="91" data-price="3500.00" data-rating="4.0">
+<img alt="sony grabadora de voz digital estéreo icdux560blk con usb integrado" height="380px" src="Images/accessories/Sony grabadora de voz digital est├®reo ICDUX560BLK con USB integrado.jpg" width="40px"/>
+<h4>Sony grabadora de voz digital estéreo ICDUX560BLK con USB</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R3 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="20" data-popularity="66" data-price="3000.00" data-rating="4.5">
+<img alt="product 5" height="380px" src="Images/accessories/product-5.jpg" width="40px"/>
+<h4> Single mic </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R3 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="420" data-price="1500.00" data-rating="5.0">
+<img alt="portable phone charger 5000mah power bank   color  black   size  os" src="Images/accessories/Portable Phone Charger 5000mah Power Bank _ Color_ Black _ Size_ Os.jpg" width="380px"/>
+<h4>Portable Phone Charger 5000mah Power Bank  </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+<p>R1 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="330" data-price="3000.00" data-rating="4.5">
+<img alt="omni 20+ bundle ac dc usbc power bank   bundle with protective case and fast cha" src="Images/accessories/product_image_13.jpg" width="250px"/>
+<h4>Omni 20+ Bundle AC_DC_USBC Power Bank </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R3 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="465" data-price="2900.00" data-rating="4.5">
+<img alt="iphone fast charger cable,fast charger iphone 20w pd usb c wall charger type c p" src="Images/accessories/product_image_12.jpg" width="250px"/>
+<h4>iPhone Fast Charger Cable </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R2 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="260" data-price="12000.00" data-rating="5.0">
+<img alt="fingerprint usb3 0 flash drive encrypted 64g memory stick pen zip drive biometri" src="Images/accessories/product_image_10.jpg" width="380px"/>
+<h4>Fingerprint USB3 </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+<p>R12 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="382" data-price="500.00" data-rating="4.0">
+<img alt="product 1" src="Images/accessories/product-1.jpg" width="250px"/>
+<h4> SanDisk USB </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="20" data-popularity="6" data-price="2900.00" data-rating="4.5">
+<img alt="✨ the smartest fitness tracker for people who hate smartwatches" src="Images/accessories/Ô£¿ The Smartest Fitness Tracker for People Who Hate Smartwatches.jpg" width="250px"/>
+<h4>The Smartest Fitness Tracker </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R2 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Gaming" data-discount="0" data-popularity="408" data-price="1900.00" data-rating="4.0">
+<img alt="playstation dualsense wireless controller – cosmic red" src="Images/gaming/PlayStation DualSense Wireless Controller ÔÇô Cosmic Red.jpg" width="250px"/>
+<h4>PlayStation DualSense Wireless Controller </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R1 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Gaming" data-discount="0" data-popularity="388" data-price="2900.00" data-rating="4.5">
+<img alt="controle sem fio sony dualsense hyperpop para ps5, vermelho techno red" src="Images/gaming/Controle Sem Fio Sony DualSense Hyperpop para PS5, Vermelho Techno Red.jpg" width="250px"/>
+<h4>Controle Sem Fio Sony DualSense Hyperpop para PS5 </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R2 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Gaming" data-discount="0" data-popularity="335" data-price="2000.00" data-rating="4.5">
+<img alt="dualsense wireless controller" src="Images/gaming/DualSense Wireless Controller.jpg" width="250px"/>
+<h4>DualSense Wireless Controller </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R2 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="180" data-price="2000.00" data-rating="4.5">
+<img alt="agm kids night vision goggles, adjustable spy gear night mission goggles with fl" src="Images/accessories/AGM Kids Night Vision Goggles, Adjustable Spy Gear Night Mission Goggles with Flip-Out Lights Green Lens.jpg" width="250px"/>
+<h4>AGM Kids Night Vision Goggles </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R2 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="367" data-price="3000.00" data-rating="4.0">
+<img alt="[2 pack] iniu portable charger, 22 5w pd qc fast charging 20000mah led display p" src="Images/accessories/product_image_11.jpg" width="250px"/>
+<h4>[2 Pack] INIU Portable Charger </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R3 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Accessories" data-discount="0" data-popularity="198" data-price="3800.00" data-rating="4.5">
+<img alt="nasa artemis diy smartwatch kit   learn coding, electronics &amp; wearable tech   st" src="Images/accessories/NASA Artemis DIY Smartwatch Kit _ Learn Coding, Electronics &amp; Wearable Tech _ STEM Gift for Kids &amp; Teens (Ages 9+).jpg" width="250px"/>
+<h4> NASA Artemis DIY Smartwatch Kit </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R3 800.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="490" data-price="18000.00" data-rating="4.0">
+<img alt="hp 640 g5 laptop, core i5 8265u 1 6ghz, 16gb, 512gb nvme, 14  hd, windows 11 pro" src="Images/computer/HP 640 G5 Laptop, Core i5-8265U 1_6GHz, 16GB, 512GB NVMe, 14_ HD, Windows 11 Pro 64-bit, Webcam, (Refurbished).jpg" width="250px"/>
+<h4>HP 640 G5 Laptop, Core i5-8265U </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R18 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="192" data-price="21900.00" data-rating="4.5">
+<img alt="mac book" src="Images/computer/Mac Book.jpg" width="250px"/>
+<h4>Mac Book </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R21 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="208" data-price="21900.00" data-rating="4.5">
+<img alt="find the perfect desktop computer   staples" src="Images/computer/Find the Perfect Desktop Computer _ Staples.jpg" width="250px"/>
+<h4>Desktop Computer</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R21 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="339" data-price="32900.00" data-rating="4.5">
+<img alt="apple pc" src="Images/computer/Apple PC.jpg" width="250px"/>
+<h4>Apple pc </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R32 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="309" data-price="34500.00" data-rating="4.0">
+<img alt="hp elitebook 830 g8 intel core i5 1135g7 16gb ram 512gb ssd 13 3  fhd windows 11" src="Images/computer/Hp Elitebook 830 G8 Intel Core I5-1135g7 16gb Ram 512gb Ssd 13_3_ Fhd Windows 11.jpg" width="250px"/>
+<h4>Hp Elitebook 830 G8 Intel Core I5-1135g7 16gb</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R34 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="60" data-price="16000.00" data-rating="4.5">
+<img alt="hp 123" src="Images/computer/HP-123.webp" width="250px"/>
+<h4> HP-123 </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R16 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="380" data-price="27000.00" data-rating="4.0">
+<img alt="hp pc" src="Images/computer/HP pc.jpg" width="250px"/>
+<h4>HP computer </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R27 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="40" data-popularity="236" data-price="32900.00" data-rating="4.5">
+<img alt="dell optiplex 9020 desktop computer" src="Images/computer/Dell Optiplex 9020 Desktop Computer.jpg" width="250px"/>
+<h4>Dell Optiplex 9020 Desktop Computer</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R32 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="479" data-price="42900.00" data-rating="4.5">
+<img alt="apple 2024 imac all in one desktop computer with m4 chip" src="Images/computer/Apple 2024 iMac All-in-One Desktop Computer with M4 chip.jpg" width="250px"/>
+<h4>Apple 2024 iMac All-in-One Desktop Computer </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R42 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="257" data-price="12900.00" data-rating="4.5">
+<img alt="lenova pc" src="Images/computer/Lenova pc.jpg" width="250px"/>
+<h4>Lenova pc </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R12 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="0" data-popularity="222" data-price="13500.00" data-rating="4.0">
+<img alt="new pc" src="Images/computer/new pc.webp" width="250px"/>
+<h4>HP new pc</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R13 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Computers" data-discount="10" data-popularity="181" data-price="12000.00" data-rating="4.5">
+<img alt="pc" src="Images/computer/pc.jpg" width="250px"/>
+<h4> HP computer pc </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R12 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Headphones" data-discount="20" data-popularity="86" data-price="5000.00" data-rating="4.0">
+<img alt="apple airpods max wireless over ear headphones" src="Images/headphone/Apple AirPods Max Wireless Over-Ear Headphones.jpg" width="250px"/>
+<h4>Apple AirPods Max Wireless Over-Ear Headphones </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R5 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Headphones" data-discount="0" data-popularity="364" data-price="2900.00" data-rating="4.5">
+<img alt="bluetooth wireless over ear hifi headphones with drivers black" src="Images/headphone/Bluetooth Wireless Over Ear HiFi Headphones With Drivers black.jpg" width="250px"/>
+<h4>Bluetooth Wireless Over Ear HiFi </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R2 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Headphones" data-discount="0" data-popularity="415" data-price="6900.00" data-rating="4.5">
+<img alt="jbl tune 700bt wireless bluetooth over ear headphones with up to 27 hours of bat" src="Images/headphone/JBL Tune 700BT Wireless Bluetooth Over-Ear Headphones with up to 27 Hours of Battery Life - Black.jpg" width="250px"/>
+<h4>JBL Tune 700BT Wireless Bluetooth Over-Ear </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R6 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Headphones" data-discount="0" data-popularity="333" data-price="3900.00" data-rating="4.5">
+<img alt="movssou e7 active noise cancelling headphones bluetooth headphones wireless head" src="Images/headphone/product_image_05.jpg" width="250px"/>
+<h4>MOVSSOU E7 Active Noise Cancelling Headphones Bluetooth Over Ear </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R3 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Headphones" data-discount="0" data-popularity="164" data-price="1200.00" data-rating="4.0">
+<img alt="this headphones will be very good" src="Images/headphone/this headphones will be very good.jpg" width="250px"/>
+<h4>Headphones Bluetooth</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R1 200.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Headphones" data-discount="0" data-popularity="460" data-price="3000.00" data-rating="4.5">
+<img alt="wireless over ear bluetooth headphones" src="Images/headphone/Wireless Over Ear Bluetooth Headphones.jpg" width="250px"/>
+<h4> Wireless Over Ear Bluetooth Headphones </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R3 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Earpods" data-discount="0" data-popularity="104" data-price="2000.00" data-rating="4.0">
+<img alt="baseus" src="Images/earpod/Baseus.jpg" width="250px"/>
+<h4>earpod Baseus </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R2 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Earpods" data-discount="10" data-popularity="401" data-price="3900.00" data-rating="4.5">
+<img alt="soundcore by anker life p2 mini true wireless earbuds in ear kopfhörer sale 50%" src="Images/earpod/Soundcore by Anker Life P2 Mini True-Wireless Earbuds In-Ear Kopfh├Ârer SALE 50%.jpg" width="250px"/>
+<h4>Anker Life P2 Mini True-Wireless Earbuds </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R3 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Earpods" data-discount="0" data-popularity="295" data-price="3500.00" data-rating="4.0">
+<img alt="buy airpods pro 3" src="Images/earpod/Buy AirPods Pro 3.jpg" width="250px"/>
+<h4>AirPods Pro 3</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R3 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Earpods" data-discount="0" data-popularity="408" data-price="1500.00" data-rating="4.0">
+<img alt="gallery b1" src="Images/earpod/gallery-B1.jpg" width="250px"/>
+<h4>earpod</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R1 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Earpods" data-discount="0" data-popularity="290" data-price="2500.00" data-rating="4.0">
+<img alt="realme buds t310 true wireless in ear earbuds with 46db hybrid anc, 360° spatial" src="Images/earpod/product_image_14.jpg" width="250px"/>
+<h4>realme Buds T310 True Wireless in-Ear Earbuds</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R2 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Earpods" data-discount="0" data-popularity="472" data-price="3000.00" data-rating="4.5">
+<img alt="beats studio buds true wireless bluetooth earbuds  black   walmart com" src="Images/earpod/Beats Studio Buds True Wireless Bluetooth Earbuds- Black - Walmart_com.jpg" width="250px"/>
+<h4> Beats Studio Buds True Wireless Bluetooth Earbuds </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R3 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Gaming" data-discount="0" data-popularity="268" data-price="27000.00" data-rating="4.0">
+<img alt="gaming set" src="Images/gaming/gaming set.jpg" width="250px"/>
+<h4>Dowinx Gaming Chair Ergonomic Racing Style </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R127 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+
+</div><div class="col-4 product-card" data-category="Gaming" data-discount="0" data-popularity="467" data-price="38900.00" data-rating="4.5">
+<img alt="playstation 4" src="Images/gaming/PlayStation 4.jpg" width="250px"/>
+<h4>PlayStation 4 limited Edition </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R38 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</button>
+</div><div class="col-4 product-card" data-category="Gaming" data-discount="0" data-popularity="305" data-price="15900.00" data-rating="4.5">
+<img alt="meta quest 3" src="Images/gaming/META QUEST 3.jpg" width="250px"/>
+<h4> Oculus Quest 2VR Headset </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R15 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Gaming" data-discount="0" data-popularity="303" data-price="22000.00" data-rating="4.5">
+<img alt="i have so much fun with this thing   it's a great time waster" src="Images/gaming/I have so much fun with this thing_  It's a great time waster_.jpg" width="250px"/>
+<h4>XBOX 360 original </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R22 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</button>
+</div><div class="col-4 product-card" data-category="Gaming" data-discount="0" data-popularity="367" data-price="100500.00" data-rating="4.0">
+<img alt="gtr setting" src="Images/gaming/GTR setting.jpg" width="250px"/>
+<h4>GTR setting</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R27 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Gaming" data-discount="40" data-popularity="436" data-price="30000.00" data-rating="4.5">
+<img alt="ps 5" src="Images/gaming/ps 5.jpg" width="250px"/>
+<h4> Play Station 5 New Edition 2026 </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R30 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Smartphones" data-discount="40" data-popularity="56" data-price="18800.00" data-rating="4.0">
+<img alt="iphone 16 128gb in ultramarine   6 1 inch super retina xdr display   apple" src="Images/smartphone/iPhone 16 128GB in Ultramarine _ 6_1-inch Super Retina XDR display - Apple.jpg" width="250px"/>
+<h4>iPhone 16 256GB in Ultramarine </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R18 800.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Smartphones" data-discount="0" data-popularity="464" data-price="17900.00" data-rating="4.5">
+<img alt="iphone 16 128gb in pink   6 1 inch super retina xdr display   apple" src="Images/smartphone/iPhone 16 128GB in Pink _ 6_1-inch Super Retina XDR display - Apple.jpg" width="250px"/>
+<h4>iPhone 16 128GB in Pink  </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R17 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Smartphones" data-discount="0" data-popularity="140" data-price="17500.00" data-rating="4.0">
+<img alt="iphone 16 128gb in ultramarine   6 1 inch super retina xdr display   apple" src="Images/smartphone/iPhone 16 128GB in Ultramarine _ 6_1-inch Super Retina XDR display - Apple.jpg" width="250px"/>
+<h4>iPhone 16 128GB in Ultramarine </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R17 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Smartphones" data-discount="0" data-popularity="420" data-price="26500.00" data-rating="4.0">
+<img alt="iphone 17 pro 256gb in cosmic orange   apple" src="Images/smartphone/iPhone 17 Pro 256GB in Cosmic Orange - Apple.jpg" width="250px"/>
+<h4>iPhone 17 Pro 256GB in Cosmic Orange</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R26 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Smartphones" data-discount="0" data-popularity="78" data-price="26500.00" data-rating="4.0">
+<img alt="iphone 17 pro max 256gb in deep blue   apple" src="Images/smartphone/iPhone 17 Pro Max 256GB in Deep Blue - Apple.jpg" width="250px"/>
+<h4>iPhone 17 Pro Max 256GB in Deep Blue</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R26 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Smartphones" data-discount="0" data-popularity="134" data-price="19000.00" data-rating="4.5">
+<img alt="iphone air 256gb in light gold   6 5 inch display   apple" src="Images/smartphone/iPhone Air 256GB in Light Gold _ 6_5-inch Display - Apple.jpg" width="250px"/>
+<h4> iPhone Air 256GB in Light Gold </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R19 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+
+</div><div class="col-4 product-card" data-category="Watches" data-discount="0" data-popularity="95" data-price="7000.00" data-rating="4.0">
+<img alt="smart watch for android phones ios" src="Images/watch/Smart Watch for Android Phones iOS.jpg" width="250px"/>
+<h4> Luxury Apple Watch  </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R7 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Watches" data-discount="0" data-popularity="423" data-price="6900.00" data-rating="4.5">
+<img alt="apple watch se3 gps 40 mm  smart fitness companion  workout partner  stylish, sm" src="Images/watch/AppleÔÇ»WatchÔÇ»SE3ÔÇ»GPSÔÇ»40ÔÇ»mmÔÇ»-SmartÔÇ»FitnessÔÇ»Companion  workout partner -stylish, smart, unstoppable.jpg" width="250px"/>
+<h4> Apple Watch SE3  </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+</div>
+<p>R6 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Watches" data-discount="0" data-popularity="192" data-price="3900.00" data-rating="4.0">
+<img alt="best budget smartwatches in 2026  top cheap fitness trackers" src="Images/watch/Best Budget Smartwatches in 2026_ Top Cheap Fitness Trackers.jpg" width="250px"/>
+<h4>Polaroid Single Touch Active Fitness Watch</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R3 900.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Watches" data-discount="0" data-popularity="337" data-price="7500.00" data-rating="4.0">
+<img alt="apple watch color rosa bebé original" src="Images/watch/Apple Watch color rosa beb├® original.jpg" width="250px"/>
+<h4> Apple watch rose bebé</h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R7 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Watches" data-discount="0" data-popularity="242" data-price="7500.00" data-rating="4.0">
+<img alt="apple watch series 11" src="Images/watch/Apple Watch Series 11.jpg" width="250px"/>
+<h4>Apple Watch Series 11 </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R7 500.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div><div class="col-4 product-card" data-category="Watches" data-discount="0" data-popularity="337" data-price="6000.00" data-rating="3.5">
+<img alt="apple watch men" src="Images/watch/Apple watch men.jpg" width="250px"/>
+<h4> Samsung Watch For Men  </h4>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-o"></i>
+<i class="fa fa-star-o"></i>
+</div>
+<p>R6 000.00</p>
+<button class="btn" onclick="kotechAddToCart({name: 'PS5 Gaming Console', price: 12999, image: 'Images/gaming/ps 5.jpg'})">
+                    Add to Cart
+</div></div>
+<!------------------second row---------------->
+
+<!------------------Third row---------------->
+
+<!------------------Fourth row---------------->
+
+<!------------------Fifth row---------------->
+
+<!-------------------Sixth row---------------->
+
+<!------------------Seventh row--------------->
+
+<!------------------Eighth row---------------->
+
+<!-------------------Ninth row---------------->
+
+<!------------------Tenth row---------------->
+
+<p class="no-results" id="noResults" style="display:none;">No products match your filters. Try clearing some filters.</p>
+<div class="page-btn" id="pageBtns">
+<span class="active">1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span class="page-next">→</span>
+</div>
+<!------------Footer------------->
+<div class="footer">
+<div class="contaniner">
+<div class="row">
+<div class="footer-col-1">
+<h3>Download Our App</h3>
+<p>Download App For Android And Ios Mobile Phone.</p>
+<div class="app-logo">
+<img alt="play store" src="play-store.png"/>
+<img alt="play store" src="play-store.png"/>
+</div>
+</div>
+<div class="footer-col-2">
+<img alt="KO TECH logo" src="Images/logo.jpg" width="120px"/>
+<p>Our Purpose Is To Sustainably Make The Pleasure And
+                    Benefits Of Tech Accessible To The Many.</p>
+</div>
+<div class="footer-col-3">
+<h3>Useful Link</h3>
+<ul>
+<li><a href="Deals.html">Deals</a></li>
+<li><a href="Wishlist.html">Wishlist</a></li>
+<li><a href="Checkout.html">Checkout</a></li>
+<li><a href="Reviews.html">Reviews</a></li>
+</ul>
+</div>
+<div class="footer-col-5">
+<h3>My Account</h3>
+<ul>
+<li><a href="Login.html">Sign In</a></li>
+<li><a href="Register.html">Register</a></li>
+<li><a href="Track-Order.html">Track Order</a></li>
+<li><a href="Payment-Methods.html">Payment Methods</a></li>
+</ul>
+</div>
+<div class="footer-col-4">
+<h3>Follow us</h3>
+<ul>
+<li>FaceBook</li>
+<li>Twitter</li>
+<li>Instagram</li>
+<li>YouTube</li>
+</ul>
+</div>
+</div>
+<hr/>
+<p class="copyright">Copyright 2026-KO TECH |Ecommerce Solutions</p>
+</div>
+</div>
+<!----------------js for toggle menu------------------>
+<script src="auth.js"></script>
+
+</body>
+</html>

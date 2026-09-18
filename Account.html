@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Account - KO TECH</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<meta content="KO TECH customer account page." name="description"/>
+</head>
+<body>
+  <!-----------header---------------->
+  
+<div class="header header-sub">
+<div class="container">
+<div class="navbar">
+<div class="logo"><a href="1Index.html"><img alt="KO TECH logo" src="Images/logo.jpg" width="250px"/></a></div>
+<nav aria-label="Primary navigation" class="site-nav"><ul class="primary-links" id="MenuItems"><li><a href="1Index.html">Home</a></li><li><a href="Product.html">Products</a></li><li><a href="Deals.html">Deals</a></li><li><a href="About.html">About</a></li><li><a href="Contact.html">Contact</a></li></ul></nav>
+<div class="header-icons">
+<a aria-label="Track Order" href="Track-Order.html" title="Track Order"><i class="fa fa-map-marker"></i></a>
+<a aria-label="My Account" href="Account.html" title="My Account"><i class="fa fa-user-circle-o"></i></a>
+<a aria-label="Wishlist" href="Wishlist.html" title="Wishlist"><i class="fa fa-heart-o"></i></a>
+<a aria-label="Shopping cart" href="Cart.html" title="Cart"><i class="fa fa-shopping-cart"></i></a>
+</div>
+<!-----------MENU TOGGLE---------------->
+
+<input class="menu-toggle" id="allPagesMenuToggle" type="checkbox" aria-label="Show menu"/>
+<label class="menu-icon" for="allPagesMenuToggle" aria-label="Show menu">☰</label>
+<div class="all-pages-menu" id="allPagesMenu"><div class="all-pages-heading">All Website Pages</div><div class="all-pages-grid"><a href="1Index.html">Home</a><a href="Product.html">Products</a><a href="PRODUCT NEW.html">New Products</a><a href="Product-Details.html">Product Details</a><a href="Deals.html">Deals</a><a href="Wishlist.html">Wishlist</a><a href="Cart.html">Cart</a><a href="Checkout.html">Checkout</a><a href="Order-Confirmation.html">Order Confirmation</a><a href="Track-Order.html">Track Order</a><a href="Payment-Methods.html">Payment Methods</a><a href="Reviews.html">Reviews</a><a href="About.html">About</a><a href="Contact.html">Contact</a><a aria-current="page" class="current-page" href="Account.html">My Account</a><a href="Login.html">Sign In</a><a href="Register.html">Register</a></div></div></div>
+</div>
+</div>
+<!-----------SECTION---------------->
+
+<div class="section">
+<h1 class="title">My Account</h1>
+<div class="auth-wrap" id="accountBox">
+<h2 id="accountName">Welcome</h2>
+<p id="accountEmail">Sign in to view your account.</p>
+<div class="detail-actions">
+<a class="btn" href="Cart.html">View Cart</a>
+<a class="btn detail-wishlist" href="Wishlist.html">View Wishlist</a>
+<button class="btn" id="signOutBtn" type="button">Sign Out</button>
+</div>
+</div>
+</div>
+<div class="footer"><div class="container"><div class="row"><div class="footer-col-1"><h3>KO TECH</h3><p>Smart technology, better life.</p></div><div class="footer-col-2"><img alt="KO TECH logo" src="Images/logo.jpg" width="120"/><p>Quality technology products and accessories.</p></div><div class="footer-col-3"><h3>Useful Links</h3><ul><li><a href="Deals.html">Deals</a></li><li><a href="Wishlist.html">Wishlist</a></li><li><a href="Cart.html">Cart</a></li><li><a href="Reviews.html">Reviews</a></li></ul></div></div><hr/><p class="copyright">Copyright 2026 - KO TECH | Ecommerce Solutions</p></div></div>
+<script src="auth.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var user = kotechCurrentUser();
+  if (!user) { document.getElementById('accountName').textContent='No active account'; document.getElementById('accountEmail').textContent='Please sign in or register to continue.'; return; }
+  document.getElementById('accountName').textContent='Welcome, '+user.name;
+  document.getElementById('accountEmail').textContent=user.email;
+  document.getElementById('signOutBtn').addEventListener('click',function(){ localStorage.removeItem('kotech_current_user'); location.href='Login.html'; });
+});
+</script>
+</body>
+</html>

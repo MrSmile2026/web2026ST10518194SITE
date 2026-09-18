@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track Order - KO TECH</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<meta content="KO TECH technology store — Track Order - KO TECH." name="description"/></head>
+<body>
+<div class="header header-sub">
+<div class="contaniner">
+<div class="navbar">
+<div class="logo">
+<a href="1Index.html"><img alt="KO TECH logo" src="Images/logo.jpg" width="150px"/></a>
+</div>
+<nav aria-label="Primary navigation" class="site-nav"><ul class="primary-links" id="MenuItems"><li><a href="1Index.html">Home</a></li><li><a href="Product.html">Products</a></li><li><a href="Deals.html">Deals</a></li><li><a href="About.html">About</a></li><li><a href="Contact.html">Contact</a></li></ul></nav>
+<a class="header-icon-link" href="Track-Order.html" title="Track Order"><i class="fa fa-map-marker"></i></a>
+<a class="header-icon-link" href="Login.html" id="accountLink" title="Sign In"><i class="fa fa-user-circle-o"></i></a>
+<a class="header-icon-link" href="Wishlist.html" title="Wishlist"><img alt="Wishlist" height="26px" src="Images/heart icon.jpg" width="26px"/></a>
+<a class="header-icon-link" href="Cart.html" title="Cart"><img alt="Shopping cart" height="30px" src="Images/cart-.jpg" width="30px"/></a>
+
+<input class="menu-toggle" id="allPagesMenuToggle" type="checkbox" aria-label="Show menu"/>
+<label class="menu-icon" for="allPagesMenuToggle" aria-label="Show menu">☰</label>
+<div class="all-pages-menu" id="allPagesMenu"><div class="all-pages-heading">All Website Pages</div><div class="all-pages-grid"><a href="1Index.html">Home</a><a href="Product.html">Products</a><a href="PRODUCT NEW.html">New Products</a><a href="Product-Details.html">Product Details</a><a href="Deals.html">Deals</a><a href="Wishlist.html">Wishlist</a><a href="Cart.html">Cart</a><a href="Checkout.html">Checkout</a><a href="Order-Confirmation.html">Order Confirmation</a><a aria-current="page" class="current-page" href="Track-Order.html">Track Order</a><a href="Payment-Methods.html">Payment Methods</a><a href="Reviews.html">Reviews</a><a href="About.html">About</a><a href="Contact.html">Contact</a><a href="Account.html">My Account</a><a href="Login.html">Sign In</a><a href="Register.html">Register</a></div></div></div>
+</div>
+</div>
+<div class="page-banner">
+<h1>Track Your Order</h1>
+<p class="breadcrumb"><a href="1Index.html">Home</a> / Track Order</p>
+</div>
+<div class="track-form">
+<h3>Enter Your Tracking Number</h3>
+<div class="form-group">
+<label>Tracking Number</label>
+<input id="trackInput" placeholder="e.g. KOT-100000" type="text"/>
+</div>
+<div class="form-msg" id="trackMsg"></div>
+<button class="submit-btn" onclick="trackOrder()" style="width:100%;">Track Order →</button>
+<p style="font-size:12px;color:#999;margin-top:15px;text-align:center;">
+        Try our demo tracking number: <strong>KOT-100000</strong>
+</p>
+</div>
+<!-----------track result---------------->
+
+<div class="track-not-found" id="trackNotFound">
+<i class="fa fa-exclamation-circle"></i>
+<p>We couldn't find an order with that tracking number. Please double check and try again.</p>
+</div>
+<div class="track-result" id="trackResult">
+<div class="track-result-head">
+<div>
+<span>Tracking Number</span>
+<strong id="resTracking"></strong>
+</div>
+<div>
+<span>Order Date</span>
+<strong id="resDate"></strong>
+</div>
+<div>
+<span>Total</span>
+<strong id="resTotal"></strong>
+</div>
+</div>
+<div class="track-timeline" id="resTimeline"></div>
+<div class="small-contain">
+<iframe allowfullscreen="" class="map-frame" loading="lazy" src="https://www.google.com/maps?q=Durban,South+Africa&amp;output=embed"></iframe>
+</div>
+</div>
+<script>
+function renderTracking(order){
+    document.getElementById('trackNotFound').classList.remove('show');
+    document.getElementById('resTracking').textContent = order.trackingNumber;
+    document.getElementById('resDate').textContent = new Date(order.date).toLocaleDateString();
+    document.getElementById('resTotal').textContent = order.total;
+
+    var timeline = kotechBuildTimeline(order);
+    var wrap = document.getElementById('resTimeline');
+    wrap.innerHTML = '';
+    timeline.forEach(function(step){
+        var div = document.createElement('div');
+        div.className = 'track-step' + (step.done ? ' done' : '') + (step.current ? ' current' : '');
+        div.innerHTML = '<div class="step-icon"><i class="fa ' + step.icon + '"></i></div><span>' + step.label + '</span>';
+        wrap.appendChild(div);
+    });
+
+    document.getElementById('trackResult').classList.add('show');
+}
+
+function trackOrder(){
+    var val = document.getElementById('trackInput').value;
+    var msg = document.getElementById('trackMsg');
+    if(!val.trim()){
+        msg.textContent = 'Please enter a tracking number.';
+        msg.className = 'form-msg error';
+        return;
+    }
+    msg.textContent = '';
+    var order = kotechFindOrder(val);
+    if(!order){
+        document.getElementById('trackResult').classList.remove('show');
+        document.getElementById('trackNotFound').classList.add('show');
+        return;
+    }
+    renderTracking(order);
+}
+
+/* Auto-fill from ?tracking=KOT-XXXXXX query param (used by Account page links) */
+(function(){
+    var params = new URLSearchParams(window.location.search);
+    var t = params.get('tracking');
+    if(t){
+        document.getElementById('trackInput').value = t;
+        trackOrder();
+    }
+})();
+</script>
+<!------------Footer------------->
+<div class="footer">
+<div class="contaniner">
+<div class="row">
+<div class="footer-col-1">
+<h3>Download Our App</h3>
+<p>Download App For Android And Ios Mobile Phone.</p>
+<div class="app-logo">
+<img alt="play store" src="play-store.png">
+<img alt="play store" src="play-store.png"/>
+</img></div>
+</div>
+<div class="footer-col-2">
+<img alt="KO TECH logo" src="Images/logo.jpg" width="120px"/>
+<p>Our Purpose Is To Sustainably Make The Pleasure And
+                    Benefits Of Tech Accessible To The Many.</p>
+</div>
+<div class="footer-col-3">
+<h3>Useful Link</h3>
+<ul>
+<li><a href="Deals.html">Deals</a></li>
+<li><a href="Wishlist.html">Wishlist</a></li>
+<li><a href="Checkout.html">Checkout</a></li>
+<li><a href="Reviews.html">Reviews</a></li>
+</ul>
+</div>
+<div class="footer-col-5">
+<h3>My Account</h3>
+<ul>
+<li><a href="Login.html">Sign In</a></li>
+<li><a href="Register.html">Register</a></li>
+<li><a href="Track-Order.html">Track Order</a></li>
+<li><a href="Payment-Methods.html">Payment Methods</a></li>
+</ul>
+</div>
+<div class="footer-col-4">
+<h3>Follow us</h3>
+<ul>
+<li>FaceBook</li>
+<li>Twitter</li>
+<li>Instagram</li>
+<li>YouTube</li>
+</ul>
+</div>
+</div>
+<hr/>
+<p class="copyright">Copyright 2026-KO TECH |Ecommerce Solutions</p>
+</div>
+</div>
+<!----------------js for toggle menu------------------>
+
+<script src="auth.js"></script>
+</body>
+</html>

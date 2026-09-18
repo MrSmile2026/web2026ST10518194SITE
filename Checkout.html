@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - KO TECH</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<meta content="KO TECH technology store — Checkout - KO TECH." name="description"/></head>
+<body>
+<div class="header header-sub">
+<div class="contaniner">
+<div class="navbar">
+<div class="logo">
+<a href="1Index.html"><img alt="KO TECH logo" src="Images/logo.jpg" width="150px"/></a>
+</div>
+<nav aria-label="Primary navigation" class="site-nav"><ul class="primary-links" id="MenuItems"><li><a href="1Index.html">Home</a></li><li><a href="Product.html">Products</a></li><li><a href="Deals.html">Deals</a></li><li><a href="About.html">About</a></li><li><a href="Contact.html">Contact</a></li></ul></nav>
+<a class="header-icon-link" href="Track-Order.html" title="Track Order"><i class="fa fa-map-marker"></i></a>
+<a class="header-icon-link" href="Login.html" id="accountLink" title="Sign In"><i class="fa fa-user-circle-o"></i></a>
+<a class="header-icon-link" href="Wishlist.html" title="Wishlist"><img alt="Wishlist" height="26px" src="Images/heart icon.jpg" width="26px"/></a>
+<a class="header-icon-link" href="Cart.html" title="Cart"><img alt="Shopping cart" height="30px" src="Images/cart-.jpg" width="30px"/></a>
+
+<input class="menu-toggle" id="allPagesMenuToggle" type="checkbox" aria-label="Show menu"/>
+<label class="menu-icon" for="allPagesMenuToggle" aria-label="Show menu">☰</label>
+<div class="all-pages-menu" id="allPagesMenu"><div class="all-pages-heading">All Website Pages</div><div class="all-pages-grid"><a href="1Index.html">Home</a><a href="Product.html">Products</a><a href="PRODUCT NEW.html">New Products</a><a href="Product-Details.html">Product Details</a><a href="Deals.html">Deals</a><a href="Wishlist.html">Wishlist</a><a href="Cart.html">Cart</a><a aria-current="page" class="current-page" href="Checkout.html">Checkout</a><a href="Order-Confirmation.html">Order Confirmation</a><a href="Track-Order.html">Track Order</a><a href="Payment-Methods.html">Payment Methods</a><a href="Reviews.html">Reviews</a><a href="About.html">About</a><a href="Contact.html">Contact</a><a href="Account.html">My Account</a><a href="Login.html">Sign In</a><a href="Register.html">Register</a></div></div></div>
+</div>
+</div>
+<div class="page-banner">
+<h1>Checkout</h1>
+<p class="breadcrumb"><a href="1Index.html">Home</a> / <a href="Cart.html">Cart</a> / Checkout</p>
+</div>
+<div class="checkout-wrap">
+<form class="checkout-form" onsubmit="return false;">
+<h3>Billing Details</h3>
+<div class="form-row">
+<div class="form-group">
+<label>First Name</label>
+<input required="" type="text"/>
+</div>
+<div class="form-group">
+<label>Last Name</label>
+<input required="" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label>Email Address</label>
+<input required="" type="email"/>
+</div>
+<div class="form-group">
+<label>Phone Number</label>
+<input required="" type="tel"/>
+</div>
+<h3>Shipping Address</h3>
+<div class="form-group">
+<label>Street Address</label>
+<input required="" type="text"/>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label>City</label>
+<input required="" type="text"/>
+</div>
+<div class="form-group">
+<label>Province</label>
+<select>
+<option>KwaZulu-Natal</option>
+<option>Gauteng</option>
+<option>Western Cape</option>
+<option>Eastern Cape</option>
+</select>
+</div>
+<div class="form-group">
+<label>Postal Code</label>
+<input required="" type="text"/>
+</div>
+</div>
+<h3>Payment Method</h3>
+<div class="payment-options">
+<label class="payment-option"><input checked="" name="pay" onchange="showPayFields('card')" type="radio" value="card"/> <i class="fa fa-credit-card"></i> Card</label>
+<label class="payment-option"><input name="pay" onchange="showPayFields('paypal')" type="radio" value="paypal"/> <i class="fa fa-paypal"></i> PayPal</label>
+<label class="payment-option"><input name="pay" onchange="showPayFields('payflex')" type="radio" value="payflex"/> Payflex</label>
+<label class="payment-option"><input name="pay" onchange="showPayFields('eft')" type="radio" value="eft"/> EFT</label>
+</div>
+<div class="pay-fields show" id="pay-card">
+<div class="form-group">
+<label>Name On Card</label>
+<input placeholder="J. Shandu" type="text"/>
+</div>
+<div class="form-group">
+<label>Card Number</label>
+<input maxlength="19" placeholder="1234 5678 9012 3456" type="text"/>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label>Expiry Date</label>
+<input maxlength="5" placeholder="MM/YY" type="text"/>
+</div>
+<div class="form-group">
+<label>CVV</label>
+<input maxlength="4" placeholder="123" type="text"/>
+</div>
+</div>
+</div>
+<div class="pay-fields" id="pay-paypal">
+<p>You will be redirected to PayPal to complete your payment securely after clicking
+            "Place Order".</p>
+</div>
+<div class="pay-fields" id="pay-payflex">
+<p>Split your payment into 4 interest-free instalments with Payflex. You'll be
+            redirected to Payflex to complete your instalment plan after clicking "Place Order".</p>
+</div>
+<div class="pay-fields" id="pay-eft">
+<p>Please make an EFT payment to the account below and use your order number as
+            reference. Your order will ship once payment reflects.</p>
+<table class="spec-table">
+<tr><td>Bank</td><td>KO TECH Bank</td></tr>
+<tr><td>Account Name</td><td>KO TECH Pty Ltd</td></tr>
+<tr><td>Account Number</td><td>123 456 7890</td></tr>
+<tr><td>Branch Code</td><td>250655</td></tr>
+</table>
+</div>
+</form>
+<div class="order-summary">
+<h3>Order Summary</h3>
+<div class="order-item"><span>iPhone 17 Pro 256GB <span class="qty">x1</span></span><span>R49 000.00</span></div>
+<div class="order-item"><span>PlayStation 5 New Edition <span class="qty">x1</span></span><span>R30 000.00</span></div>
+<div class="order-item"><span>Apple Watch Series 11 <span class="qty">x2</span></span><span>R50 000.00</span></div>
+<div class="summary-row"><span>Subtotal</span><span>R129 000.00</span></div>
+<div class="summary-row"><span>Shipping</span><span>R150.00</span></div>
+<div class="summary-row total"><span>Total</span><span>R129 150.00</span></div>
+<div class="form-msg" id="checkoutMsg"></div>
+<button class="submit-btn" onclick="placeOrder()" style="width:100%;margin-top:10px;">Place Order →</button>
+</div>
+</div>
+<!------------Footer------------->
+<div class="footer">
+<div class="contaniner">
+<div class="row">
+<div class="footer-col-1">
+<h3>Download Our App</h3>
+<p>Download App For Android And Ios Mobile Phone.</p>
+<div class="app-logo">
+<img alt="play store" src="play-store.png">
+<img alt="play store" src="play-store.png"/>
+</img></div>
+</div>
+<div class="footer-col-2">
+<img alt="KO TECH logo" src="Images/logo.jpg" width="120px"/>
+<p>Our Purpose Is To Sustainably Make The Pleasure And
+                    Benefits Of Tech Accessible To The Many.</p>
+</div>
+<div class="footer-col-3">
+<h3>Useful Link</h3>
+<ul>
+<li><a href="Deals.html">Deals</a></li>
+<li><a href="Wishlist.html">Wishlist</a></li>
+<li><a href="Checkout.html">Checkout</a></li>
+<li><a href="Reviews.html">Reviews</a></li>
+</ul>
+</div>
+<div class="footer-col-5">
+<h3>My Account</h3>
+<ul>
+<li><a href="Login.html">Sign In</a></li>
+<li><a href="Register.html">Register</a></li>
+<li><a href="Track-Order.html">Track Order</a></li>
+<li><a href="Payment-Methods.html">Payment Methods</a></li>
+</ul>
+</div>
+<div class="footer-col-4">
+<h3>Follow us</h3>
+<ul>
+<li>FaceBook</li>
+<li>Twitter</li>
+<li>Instagram</li>
+<li>YouTube</li>
+</ul>
+</div>
+</div>
+<hr/>
+<p class="copyright">Copyright 2026-KO TECH |Ecommerce Solutions</p>
+</div>
+</div>
+<!----------------js for toggle menu------------------>
+
+<script src="auth.js"></script>
+<script>
+function showPayFields(method){
+    var all = document.getElementsByClassName('pay-fields');
+    for(var i=0;i<all.length;i++){ all[i].classList.remove('show'); }
+    document.getElementById('pay-' + method).classList.add('show');
+}
+
+function placeOrder(){
+ var form=document.querySelector('.checkout-form'), msg=document.getElementById('checkoutMsg'), cart=kotechGetCart();
+ if(!cart.length){msg.textContent='Your cart is empty. Add a product before checking out.';msg.className='form-msg error';return;}
+ if(!form.checkValidity()){form.reportValidity();return;}
+ var user=kotechCurrentUser(), order={trackingNumber:kotechGenerateTrackingNumber(),date:new Date().toISOString(),email:user?user.email:document.querySelector('input[type="email"]').value,total:kotechMoney(kotechCartTotal()),items:cart,status:'Processing'};
+ var orders=kotechGetOrders();orders.push(order);kotechSaveOrders(orders);localStorage.setItem('kotech_lastOrder',JSON.stringify(order));kotechSaveCart([]);
+ msg.textContent='Order placed! Redirecting to your confirmation...';msg.className='form-msg success';
+ setTimeout(function(){location.href='Order-Confirmation.html'},700);
+}
+</script>
+</body>
+</html>
