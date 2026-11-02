@@ -8,6 +8,19 @@
 **Project:** KO TECH ecommerce showcase (HTML, CSS, JavaScript)  
 **Assessment:** Part 3 Portfolio of Evidence, 2026
 
+## 2026-11-02 assessment upgrade
+This version was reviewed against the supplied Part 3 rubric. It adds:
+- Page-specific metadata and robots exclusion for duplicate/private support pages.
+- Complete Netlify Forms field matching, bot-field traps, clearer local-preview errors, focus styling and form feedback.
+- `IMAGE-ATTRIBUTION-REGISTER.csv` containing all project image paths for genuine source verification.
+- `PART2-FEEDBACK-EVIDENCE.md` and `SUBMISSION-EVIDENCE-GUIDE.md` for non-fabricated assessment evidence.
+- `tests/check_project.py`, `tests/test_interactions.py`, and a GitHub Actions validation workflow.
+- Local design previews under `evidence/` clearly labelled as local, not live deployment proof.
+
+**Result:** 760/760 static checks and 29/29 isolated-browser interaction checks passed in this environment. These checks do not represent an official lecturer score or prove live email, Netlify, GitHub or Supabase completion.
+
+For the remaining evidence steps needed to target the highest marking band, **read `SUBMISSION-EVIDENCE-GUIDE.md` before handing in**.
+
 ## Project summary
 A responsive ecommerce demonstration specialising in computers, gaming, phones, wearables, headphones and accessories. The glossy orange gallery showcases imagery in two animated rows, while the catalogue has live search, category filters, sorting, pagination and product detail views. Cart, wishlist, checkout, PDF order slips displaying purchased items, demo tracking, and accessibility enhancements are included.
 

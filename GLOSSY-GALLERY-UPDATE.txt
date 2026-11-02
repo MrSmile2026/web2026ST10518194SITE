@@ -1,0 +1,7 @@
+KO TECH — GLOSSY ORANGE GALLERY UPDATE
+
+Gallery.html now uses a coordinated glossy orange colour scheme across its navigation, page, image tiles and footer. Each product image is fully visible (object-fit: contain) and blends into a warm orange card rather than sitting on a stark white panel. Gloss highlights, a soft reveal/fade-in effect and hover shine are added. The two continuous moving image rows, click-to-enlarge lightbox and reduced-motion accessible mode remain.
+
+Only Gallery.html, assets/gallery-orange.css and the Gallery rendering markup inside js/app.js were changed. The order PDF, customer accounts, order tracking and other site functionality are retained from the source ZIP. Real login/orders/notifications require the Supabase configuration in SETUP-ACCOUNTS.md.
+
+Deploy: extract the ZIP and upload the extracted folder to Netlify Drop. If using a Git-connected site, commit and push the extracted website files instead.

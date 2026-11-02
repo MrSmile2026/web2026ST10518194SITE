@@ -1,0 +1,18 @@
+KO TECH GALLERY + ORDER TRACKING UPDATE
+
+Gallery.html
+- Coral-orange editorial layout based on the supplied screenshot: Our Work title, black CTA and two continuously moving rows of product photos.
+- Hover or focus pauses the movement and displays image titles; click an image to open the lightbox.
+- Reduced-motion users can scroll the rows without automatic movement.
+
+Track-Order.html
+- Signed-in customers see their Supabase orders automatically.
+- Click an order to see a five-step status timeline, saved update history, order details and PDF slip.
+- Visitors without an account see a sign-in option. Browser demo orders can be tracked only on their original browser using the private access code.
+- Press Refresh status to get the latest progress. Status moves forward only when the store updates the order in Supabase.
+
+REQUIRED FOR REAL ACCOUNTS AND TRACKING
+Follow SETUP-ACCOUNTS.md to configure your Supabase project and public project key. Do not put a secret or service_role key in website code. Payments are not processed on this site; real courier GPS tracking is not connected.
+
+NETLIFY
+Extract the ZIP and upload the extracted folder via Netlify Drop. If a Git repository is connected, replace repository contents and push instead.

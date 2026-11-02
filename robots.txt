@@ -1,0 +1,6 @@
+# KO TECH | ST10518194 NJABULO SABELO SHANDU
+# Search index public pages; private pages also include noindex HTML metadata.
+User-agent: *
+Allow: /
+Disallow: /netlify-forms.html
+Disallow: /Admin.html

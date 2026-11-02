@@ -1,0 +1,11 @@
+KO TECH — FINAL WEDE5020 SUBMISSION STEPS
+
+1. Open this project folder in Visual Studio Code.
+2. Test with VS Code Live Server or python -m http.server 8000.
+3. Upload the extracted folder to Netlify Drop or commit its files to GitHub and connect Git deployment.
+4. Enable form detection in Netlify Forms and redeploy. Add your own email address under Forms > Submission notifications and test.
+5. Add real GitHub commits with descriptive messages and screenshots. The ZIP cannot supply Git history.
+6. Follow SETUP-ACCOUNTS.md for real cross-device login/order tracking; Supabase is NOT preconfigured.
+7. Add actual Part 2 feedback and true image references before hand-in.
+8. Save screenshots of live deployed pages, including responsive, gallery, map, contact form, enquiry and search.
+9. Read RUBRIC-CHECKLIST.md to see which items are implemented and which require account configuration.
