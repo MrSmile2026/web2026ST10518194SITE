@@ -1,0 +1,14 @@
+KO TECH - CUSTOMER ORDER PDF UPDATE
+===================================
+The PDF slip downloadable after checkout and from Track Order / Account now shows:
+- Product photo for every ordered item (or a placeholder if unavailable)
+- Product name and product code
+- Quantity, unit price, and line total
+- Subtotal, discounts, delivery and order total
+- Customer and delivery information, payment and order status
+- Private tracking link
+
+The browser generates the PDF locally with no paid PDF service. Images are taken
+from your own site's Images folder and converted to JPEG for the PDF.
+Real customer accounts and persistent orders still require Supabase setup as
+described in SETUP-ACCOUNTS.md. The PDF is an order slip, not proof of payment.

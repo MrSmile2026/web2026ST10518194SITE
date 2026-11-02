@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- KO TECH | Student: ST10518194 NJABULO SABELO SHANDU | Page: netlify-forms.html -->
+<!-- Purpose: Netlify form definitions: invisible forms for build-time detection. -->
+<html lang="en"><head>
+<!-- HEAD: SEO metadata, page title, styles and scripts -->
+<meta charset="utf-8"><title>KO TECH form definitions</title><meta name="robots" content="noindex"><!-- All scripts use defer so the document structure loads first. -->
+<meta name="author" content="ST10518194 NJABULO SABELO SHANDU">
+</head>
+<body>
+<!-- BODY: accessible page structure and the visible KO TECH interface -->
+
+<!-- These forms register fields at deploy time. Real forms are rendered by js/app.js. -->
+<!-- Contact form fields must match the JavaScript-submitted form data. -->
+<form name="ko-tech-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="ko-tech-contact">
+  <input name="bot-field" type="text">
+  <input name="name" type="text">
+  <input name="email" type="email">
+  <input name="subject" type="text">
+  <textarea name="message"></textarea>
+</form>
+<!-- Product enquiry fields are registered with Netlify during deployment. -->
+<form name="ko-tech-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="ko-tech-enquiry">
+  <input name="bot-field" type="text">
+  <input name="name" type="text">
+  <input name="email" type="email">
+  <input name="phone" type="text">
+  <select name="category"><option value="">Choose</option></select>
+  <input name="product" type="text">
+  <input name="replyVia" type="text">
+  <textarea name="message"></textarea>
+  <input type="checkbox" name="consent">
+</form>
+<!-- Technical setup page credit: ST10518194 NJABULO SABELO SHANDU. -->
+</body></html>

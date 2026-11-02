@@ -1,0 +1,5 @@
+# Student: ST10518194 NJABULO SABELO SHANDU
+# Netlify publishes the site directly from the project root (where index.html lives).
+# KO TECH: static, drag-and-drop Netlify deployment
+[build]
+  publish = "."
