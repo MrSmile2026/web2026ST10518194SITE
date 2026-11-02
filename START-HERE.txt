@@ -1,0 +1,14 @@
+KO TECH — NETLIFY WEBSITE WITH LIVE ACCOUNT / ORDER OPTION
+
+1. Read SETUP-ACCOUNTS.md before publishing live accounts.
+2. In Supabase, run setup/ko-tech-supabase.sql.
+3. Put your Supabase Project URL + PUBLIC publishable key in js/backend-config.js.
+4. Extract this zip and drag the EXTRACTED FOLDER (not the zip file) into Netlify Drop.
+5. Register, confirm email, sign in, order, and open Account to view notifications.
+
+If you skip the Supabase setup, the website will still work as a local browser demo,
+but it cannot create real user accounts or store orders across devices.
+
+The website does not charge cards. Order status must be updated by a store manager
+in Supabase. Notifications are shown inside a signed-in account; browser pop-ups
+require explicit permission and only work while the website is open.

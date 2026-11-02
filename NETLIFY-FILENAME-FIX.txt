@@ -1,0 +1,118 @@
+KO-TECH Netlify safe-file fix
+============================
+
+Extract the ZIP and drag the extracted folder into https://app.netlify.com/drop
+Alternatively, push the FILES in the extracted folder to your deployment Git repository.
+
+Fixed all asset filenames containing spaces, punctuation (#), or non-ASCII symbols.
+Updated page, JavaScript catalog and original-design references to renamed files.
+Renamed 105 unsafe file names.
+
+This is a static demonstration. Orders are local demos; login and live payments require a backend.
+
+Changes (old -> new):
+Images/, Xbox icon.jpg -> Images/xbox-icon.jpg
+Images/APP STORE.jpg -> Images/app-store.jpg
+Images/Asus (1).jpg -> Images/asus-1.jpg
+Images/How The Mastercard Logo Earned Its Wordless Status (2026).jpg -> Images/how-the-mastercard-logo-earned-its-wordless-status-2026.jpg
+Images/IPhone 18 Launch Strategy Explained.jpg -> Images/iphone-18-launch-strategy-explained.jpg
+Images/PLAYSTATION LOGO.jpg -> Images/playstation-logo.jpg
+Images/VD Black and Gold Simple Bible Quote Instagram Post.mp4 -> Images/vd-black-and-gold-simple-bible-quote-instagram-post.mp4
+Images/VISA LOGO.jpg -> Images/visa-logo.jpg
+Images/accessories/12 Tech Accessories That Are Too Adorable to Resist.jpg -> Images/accessories/12-tech-accessories-that-are-too-adorable-to-resist.jpg
+Images/accessories/22 Things For Your Car That'll Make You Say,.jpg -> Images/accessories/22-things-for-your-car-that-ll-make-you-say.jpg
+Images/accessories/AGM Kids Night Vision Goggles, Adjustable Spy Gear Night Mission Goggles with Flip-Out Lights Green Lens.jpg -> Images/accessories/agm-kids-night-vision-goggles-adjustable-spy-gear-night-mission-goggles-with.jpg
+Images/accessories/NASA Artemis DIY Smartwatch Kit _ Learn Coding, Electronics & Wearable Tech _ STEM Gift for Kids & Teens (Ages 9+).jpg -> Images/accessories/nasa-artemis-diy-smartwatch-kit-learn-coding-electronics-wearable-tech-stem.jpg
+Images/accessories/Portable Phone Charger 5000mah Power Bank _ Color_ Black _ Size_ Os.jpg -> Images/accessories/portable-phone-charger-5000mah-power-bank-color-black-size-os.jpg
+Images/accessories/Portable Power Bank with Integrated Cable 10K and 20K _ Belkin UK.jpg -> Images/accessories/portable-power-bank-with-integrated-cable-10k-and-20k-belkin-uk.jpg
+Images/accessories/SanDisk 32GB Ultra Dual Drive Go USB Type-C Flash Drive, Black - SDDDC3-032G-G46.jpg -> Images/accessories/sandisk-32gb-ultra-dual-drive-go-usb-type-c-flash-drive-black-sdddc3-032g-g4.jpg
+Images/accessories/Sony grabadora de voz digital estÔö£┬«reo ICDUX560BLK con USB integrado.jpg -> Images/accessories/sony-grabadora-de-voz-digital-est-o-reo-icdux560blk-con-usb-integrado.jpg
+Images/accessories/Sony grabadora de voz digital est├®reo ICDUX560BLK con USB integrado.jpg -> Images/accessories/sony-grabadora-de-voz-digital-est-reo-icdux560blk-con-usb-integrado.jpg
+Images/accessories/The 28 Best Tech Gifts Are Perfect for Anyone on Your List.jpg -> Images/accessories/the-28-best-tech-gifts-are-perfect-for-anyone-on-your-list.jpg
+Images/accessories/The Ultimate Mobile Desk Setup for Remote Workers in 2025_ Work From Anywhere!.jpg -> Images/accessories/the-ultimate-mobile-desk-setup-for-remote-workers-in-2025-work-from-anywhere.jpg
+Images/accessories/This LED Cube Bluetooth Speaker has Style.jpg -> Images/accessories/this-led-cube-bluetooth-speaker-has-style.jpg
+Images/accessories/download (10).jpg -> Images/accessories/download-10.jpg
+Images/accessories/download (8).jpg -> Images/accessories/download-8.jpg
+Images/accessories/download (9).jpg -> Images/accessories/download-9.jpg
+Images/accessories/new product.avif -> Images/accessories/new-product.avif
+Images/accessories/product_image_07.2 (Gen 1) Type A - 200 MB_s Read Speed - Purple -> Images/accessories/product-image-07-2-gen-1-type-a-200-mb-s-read-speed-purple.jpg
+Images/accessories/unique keyboard.jpg -> Images/accessories/unique-keyboard.jpg
+Images/accessories/Ô£¿ The Smartest Fitness Tracker for People Who Hate Smartwatches.jpg -> Images/accessories/the-smartest-fitness-tracker-for-people-who-hate-smartwatches.jpg
+Images/accessories/├ö┬ú┬┐ The Smartest Fitness Tracker for People Who Hate Smartwatches.jpg -> Images/accessories/o-u-the-smartest-fitness-tracker-for-people-who-hate-smartwatches.jpg
+Images/computer/Apple 2024 iMac All-in-One Desktop Computer with M4 chip.jpg -> Images/computer/apple-2024-imac-all-in-one-desktop-computer-with-m4-chip.jpg
+Images/computer/Apple PC.jpg -> Images/computer/apple-pc.jpg
+Images/computer/Dell Optiplex 9020 Desktop Computer.jpg -> Images/computer/dell-optiplex-9020-desktop-computer.jpg
+Images/computer/Find the Perfect Desktop Computer _ Staples.jpg -> Images/computer/find-the-perfect-desktop-computer-staples.jpg
+Images/computer/HP 640 G5 Laptop, Core i5-8265U 1_6GHz, 16GB, 512GB NVMe, 14_ HD, Windows 11 Pro 64-bit, Webcam, (Refurbished).jpg -> Images/computer/hp-640-g5-laptop-core-i5-8265u-1-6ghz-16gb-512gb-nvme-14-hd-windows-11-pro-6.jpg
+Images/computer/HP pc.jpg -> Images/computer/hp-pc.jpg
+Images/computer/Hp Elitebook 830 G8 Intel Core I5-1135g7 16gb Ram 512gb Ssd 13_3_ Fhd Windows 11.jpg -> Images/computer/hp-elitebook-830-g8-intel-core-i5-1135g7-16gb-ram-512gb-ssd-13-3-fhd-windows.jpg
+Images/computer/Lenova pc.jpg -> Images/computer/lenova-pc.jpg
+Images/computer/Mac Book back.jpg -> Images/computer/mac-book-back.jpg
+Images/computer/Mac Book.jpg -> Images/computer/mac-book.jpg
+Images/computer/display microsoft Surface_ Sleek Design, Stunning Colors.jpg -> Images/computer/display-microsoft-surface-sleek-design-stunning-colors.jpg
+Images/computer/new pc.webp -> Images/computer/new-pc.webp
+Images/credits to _ vaieunoia Ôò¼├üÔö£┬╗├░├Ç on youtube_).jpg -> Images/credits-to-vaieunoia-14-u-o-on-youtube.jpg
+Images/earpod/Beats Studio Buds True Wireless Bluetooth Earbuds- Black - Walmart_com.jpg -> Images/earpod/beats-studio-buds-true-wireless-bluetooth-earbuds-black-walmart-com.jpg
+Images/earpod/Buy AirPods Pro 3.jpg -> Images/earpod/buy-airpods-pro-3.jpg
+Images/earpod/Premium Apple AirPods Pro 3 ÔÇô Sleek True Wireless Headphones for Modern Everyday Listening.jpg -> Images/earpod/premium-apple-airpods-pro-3-o-sleek-true-wireless-headphones-for-modern-ever.jpg
+Images/earpod/Soundcore by Anker Life P2 Mini True-Wireless Earbuds In-Ear Kopfh├Ârer SALE 50%.jpg -> Images/earpod/soundcore-by-anker-life-p2-mini-true-wireless-earbuds-in-ear-kopfh-arer-sale.jpg
+Images/gaming/Controle Sem Fio Sony DualSense Hyperpop para PS5, Vermelho Techno Red.jpg -> Images/gaming/controle-sem-fio-sony-dualsense-hyperpop-para-ps5-vermelho-techno-red.jpg
+Images/gaming/Controller PS5 Dual Sense.jpg -> Images/gaming/controller-ps5-dual-sense.jpg
+Images/gaming/DualSense Wireless Controller.jpg -> Images/gaming/dualsense-wireless-controller.jpg
+Images/gaming/GTR setting.jpg -> Images/gaming/gtr-setting.jpg
+Images/gaming/How to Mod a Computer Case #gaming┬á#accessories┬á#build┬á#setup #wirlessgamingcontroller #gamingcontroller┬á#control.jpg -> Images/gaming/how-to-mod-a-computer-case-gaming-a-accessories-a-build-a-setup-wirlessgamin.jpg
+Images/gaming/I have so much fun with this thing_  It's a great time waster_.jpg -> Images/gaming/i-have-so-much-fun-with-this-thing-it-s-a-great-time-waster.jpg
+Images/gaming/Luv this gaming system it's light weight yet very helpful.jpg -> Images/gaming/luv-this-gaming-system-it-s-light-weight-yet-very-helpful.jpg
+Images/gaming/META QUEST 3.jpg -> Images/gaming/meta-quest-3.jpg
+Images/gaming/Mes┬á5┬ásouhaits pour la Xbox portable.jpg -> Images/gaming/mes-a5-asouhaits-pour-la-xbox-portable.jpg
+Images/gaming/PlayStation 4.jpg -> Images/gaming/playstation-4.jpg
+Images/gaming/PlayStation DualSense Wireless Controller ÔÇô Cosmic Red.jpg -> Images/gaming/playstation-dualsense-wireless-controller-o-cosmic-red.jpg
+Images/gaming/The Most Iconic Tech Gadgets Through The Years.jpg -> Images/gaming/the-most-iconic-tech-gadgets-through-the-years.jpg
+Images/gaming/Ultimate Black Gaming Controller.jpg -> Images/gaming/ultimate-black-gaming-controller.jpg
+Images/gaming/XBOX 360 original.jpg -> Images/gaming/xbox-360-original.jpg
+Images/gaming/download (19).jpg -> Images/gaming/download-19.jpg
+Images/gaming/gaming set.jpg -> Images/gaming/gaming-set.jpg
+Images/gaming/order on WhatsApp Link in profile.jpg -> Images/gaming/order-on-whatsapp-link-in-profile.jpg
+Images/gaming/ps 5 new edition.jpg -> Images/gaming/ps-5-new-edition.jpg
+Images/gaming/ps 5.jpg -> Images/gaming/ps-5.jpg
+Images/headphone/Apple AirPods Max Wireless Over-Ear Headphones.jpg -> Images/headphone/apple-airpods-max-wireless-over-ear-headphones.jpg
+Images/headphone/Bluetooth Wireless Over Ear HiFi Headphones With Drivers black.jpg -> Images/headphone/bluetooth-wireless-over-ear-hifi-headphones-with-drivers-black.jpg
+Images/headphone/JBL Tune 700BT Wireless Bluetooth Over-Ear Headphones with up to 27 Hours of Battery Life - Black.jpg -> Images/headphone/jbl-tune-700bt-wireless-bluetooth-over-ear-headphones-with-up-to-27-hours-of.jpg
+Images/headphone/Wireless Over Ear Bluetooth Headphones.jpg -> Images/headphone/wireless-over-ear-bluetooth-headphones.jpg
+Images/headphone/this headphones will be very good.jpg -> Images/headphone/this-headphones-will-be-very-good.jpg
+Images/heart icon.jpg -> Images/heart-icon.jpg
+Images/iPhone 18 Pro Max.jpg -> Images/iphone-18-pro-max.jpg
+Images/image 1.webp -> Images/image-1.webp
+Images/iphone 18 pro max (1).jpg -> Images/iphone-18-pro-max-1.jpg
+Images/new product-Q.png -> Images/new-product-q.png
+Images/samsung logo new.jpg -> Images/samsung-logo-new.jpg
+Images/smartphone/Industrial iPhone Mockup PSD, an iPhone Mockup by East Graphics.jpg -> Images/smartphone/industrial-iphone-mockup-psd-an-iphone-mockup-by-east-graphics.jpg
+Images/smartphone/iPhone 16 128GB in Pink _ 6_1-inch Super Retina XDR display - Apple.jpg -> Images/smartphone/iphone-16-128gb-in-pink-6-1-inch-super-retina-xdr-display-apple.jpg
+Images/smartphone/iPhone 16 128GB in Ultramarine _ 6_1-inch Super Retina XDR display - Apple.jpg -> Images/smartphone/iphone-16-128gb-in-ultramarine-6-1-inch-super-retina-xdr-display-apple.jpg
+Images/smartphone/iPhone 17 Air.jpg -> Images/smartphone/iphone-17-air.jpg
+Images/smartphone/iPhone 17 Pro 256GB in Cosmic Orange - Apple.jpg -> Images/smartphone/iphone-17-pro-256gb-in-cosmic-orange-apple.jpg
+Images/smartphone/iPhone 17 Pro Max 256GB in Deep Blue - Apple.jpg -> Images/smartphone/iphone-17-pro-max-256gb-in-deep-blue-apple.jpg
+Images/smartphone/iPhone Air 256GB in Light Gold _ 6_5-inch Display - Apple.jpg -> Images/smartphone/iphone-air-256gb-in-light-gold-6-5-inch-display-apple.jpg
+Images/smartphone/iPhone Pro Max Design _ Premium Smartphone Aesthetic 2026.jpg -> Images/smartphone/iphone-pro-max-design-premium-smartphone-aesthetic-2026.jpg
+Images/smartphone/iphone 14 pro max.jpg -> Images/smartphone/iphone-14-pro-max.jpg
+Images/smartphone/iphone 15 pro max.jpg -> Images/smartphone/iphone-15-pro-max.jpg
+Images/smartphone/iphone 15 pro.jpg -> Images/smartphone/iphone-15-pro.jpg
+Images/smartphone/iphone 16 blue.jpg -> Images/smartphone/iphone-16-blue.jpg
+Images/smartphone/iphone 17 pro max.jpg -> Images/smartphone/iphone-17-pro-max.jpg
+Images/watch/Apple Watch Could Gain Breakthrough Health Upgrade, Report Claims.jpg -> Images/watch/apple-watch-could-gain-breakthrough-health-upgrade-report-claims.jpg
+Images/watch/Apple Watch Series 11.jpg -> Images/watch/apple-watch-series-11.jpg
+Images/watch/Apple Watch color rosa beb├® original.jpg -> Images/watch/apple-watch-color-rosa-beb-original.jpg
+Images/watch/Apple unveils Apple Watch Series 6 and affordable SE model.jpg -> Images/watch/apple-unveils-apple-watch-series-6-and-affordable-se-model.jpg
+Images/watch/Apple watch men.jpg -> Images/watch/apple-watch-men.jpg
+Images/watch/AppleÔÇ»WatchÔÇ»SE3ÔÇ»GPSÔÇ»40ÔÇ»mmÔÇ»-SmartÔÇ»FitnessÔÇ»Companion  workout partner -stylish, smart, unstoppable.jpg -> Images/watch/apple-watch-se3-gps-40-mm-smart-fitness-companion-workout-partner-stylish-sm.jpg
+Images/watch/Best Budget Smartwatches in 2026_ Top Cheap Fitness Trackers.jpg -> Images/watch/best-budget-smartwatches-in-2026-top-cheap-fitness-trackers.jpg
+Images/watch/HD Apple Watch Ultra Orange Alpine Side View PNG.jpg -> Images/watch/hd-apple-watch-ultra-orange-alpine-side-view-png.jpg
+Images/watch/If luxury and comfort had a baby, this would be it__Would you rock this one_­ƒÆ¼­ƒæç.jpg -> Images/watch/if-luxury-and-comfort-had-a-baby-this-would-be-it-would-you-rock-this-one-14.jpg
+Images/watch/Instant Upgrades_ Apple Watch Ultra tips and tricks ÔÇö Stuff.jpg -> Images/watch/instant-upgrades-apple-watch-ultra-tips-and-tricks-o-stuff.jpg
+Images/watch/Introducing The Apple Watch Ultra.jpg -> Images/watch/introducing-the-apple-watch-ultra.jpg
+Images/watch/Smart Watch for Android Phones iOS.jpg -> Images/watch/smart-watch-for-android-phones-ios.jpg
+Images/watch/Smart Watch for Android iPhone iOS 1_4.jpg -> Images/watch/smart-watch-for-android-iphone-ios-1-4.jpg
+Images/watch/new product-4.jpg -> Images/watch/new-product-4.jpg
+Images/watch/sumsung watch men.jpg -> Images/watch/sumsung-watch-men.jpg
+Images/’iPhone 18 Pro Max _.jpg -> Images/iphone-18-pro-max-067f55be.jpg
+PRODUCT NEW.html -> product-new.html

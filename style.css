@@ -1,3 +1,7 @@
+/* KO TECH | Student: ST10518194 NJABULO SABELO SHANDU
+ * File: style.css
+ * Purpose: Original global theme, layout, product grid, header and footer styles.
+ */
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +12,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 /*------container------*/
+/* Main navigation: flex layout for the logo and menu. */
 .navbar{
     display: flex;
     align-items: center;
@@ -34,12 +39,14 @@ p{
 }
 /*------section------*/
 
+/* Reusable width and spacing container. */
 .container{
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
+/* Responsive row layout for product/category sections. */
 .row{
     display: flex;
     align-items: center;
@@ -221,6 +228,7 @@ small{
 }   
 
 /*--------------footer-----------*/
+/* Footer: business information, links and attribution. */
 .footer{
     background: #000;
     color: #8a8a8a;
@@ -278,6 +286,7 @@ ul{
 }
 
 /*--------------media query for menu-----------*/
+/* Responsive rules adapt layouts to smaller screens. */
 @media only screen and ( max-width: 800px){
     nav ul{
         position:absolute;

@@ -1,131 +1,64 @@
-# KO TECH — Responsive E-Commerce Website
+# KO TECH — WEDE5020 Part 3 POE
 
-**Student:** NJABULO SHANDU  
-**Student Number:** ST10518194  
-**Project:** Web Development / KO TECH E-Commerce Website
+**Project owner:** ST10518194 NJABULO SABELO SHANDU
 
-## 1. Project overview
+**Student:** Njabulo Sabelo Shandu  
+**Student number:** ST10518194  
+**Module:** Web Development (Introduction), WEDE5020  
+**Project:** KO TECH ecommerce showcase (HTML, CSS, JavaScript)  
+**Assessment:** Part 3 Portfolio of Evidence, 2026
 
-KO TECH is a responsive front-end e-commerce website for technology products and accessories. The project contains a home page, product catalogue, product details, deals, cart, wishlist, checkout, payment methods, order confirmation, tracking, account registration/sign-in, reviews, contact and about pages.
+## Project summary
+A responsive ecommerce demonstration specialising in computers, gaming, phones, wearables, headphones and accessories. The glossy orange gallery showcases imagery in two animated rows, while the catalogue has live search, category filters, sorting, pagination and product detail views. Cart, wishlist, checkout, PDF order slips displaying purchased items, demo tracking, and accessibility enhancements are included.
 
-The project is implemented with HTML5, one shared external CSS stylesheet (`style.css`) and a shared JavaScript file (`auth.js`). The design uses a consistent desktop visual system and responsive breakpoints for tablets and mobile screens.
+> **Important:** This project does **not** process bank/card payments. Prices are demonstration prices and checkout records an order *request*. The site is in local-preview mode until Supabase is configured.
 
-## 2. Main files
+## Get started in Visual Studio Code
+1. Extract the ZIP. Open the extracted folder in VS Code (**File > Open Folder**).
+2. Open the terminal and run `python -m http.server 8000` (or use VS Code Live Server). This is preferable to directly opening `file://` because browser storage and network features need a web origin.
+3. Open `http://localhost:8000/` in a browser. No npm installation or build step is needed.
+4. All site assets are relative paths and all deployed filenames are URL-safe.
 
-- `1Index.html` — home page
-- `Product.html` — product catalogue
-- `PRODUCT NEW.html` — alternate product catalogue page retained from the original project
-- `Product-Details.html` — product details
-- `Deals.html` — deals page
-- `About.html` — about page
-- `Contact.html` — contact page
-- `Cart.html` — shopping cart
-- `Wishlist.html` — wishlist
-- `Checkout.html` — checkout
-- `Payment-Methods.html` — payment information
-- `Order-Confirmation.html` — order confirmation
-- `Track-Order.html` — order tracking
-- `Login.html` — sign in
-- `Register.html` — registration
-- `Reviews.html` — reviews
-- `style.css` — shared external stylesheet used by every HTML page
-- `auth.js` — shared front-end functionality and responsive menu behaviour
-- `Images/` — product, brand and interface images
-- `README.md` — project information and rubric evidence
-- `CHANGELOG.md` — development record
-- `REFERENCES.md` — external resources used during development
-- `PART2-FEEDBACK.md` — Part 1 feedback/improvement record
+## Netlify deployment
+1. Extract the folder. In Netlify Drop (`https://app.netlify.com/drop`), drag the **extracted folder**, not the ZIP.
+2. For a Git-based Netlify deployment, push the *contents of this folder* to a GitHub repository. Set the publish directory to `.` (project root); `netlify.toml` contains the setting. No build command is required.
+3. **Forms:** On the Netlify site dashboard choose **Forms > Enable form detection**; deploy again. Netlify reads `netlify-forms.html` (a static definition for the two dynamically rendered forms). Test a submission from the live Netlify URL and check **Forms > Active forms**.
+4. **Contact form email:** Under **Forms > Submission notifications > Add notification**, select **Email notification**, enter an email address owned by the store/project owner, and select `ko-tech-contact` and/or `ko-tech-enquiry`. Test with a new submission; email is *not* automatically enabled by uploading files. Do not add personal email addresses to source code.
+5. To make customer accounts and persistent orders work across devices, complete `SETUP-ACCOUNTS.md`, run `setup/ko-tech-supabase.sql`, and provide your **public** Supabase config in `js/backend-config.js`. Never upload private API keys.
+6. The `Admin.html` page is a legacy Node.js feature, not a working Netlify admin dashboard; status updates are managed through the authenticated Supabase dashboard as explained in setup. No background push/email for orders is installed.
 
-## 3. How to run the website
+## Key pages
+- `index.html` — home and featured products.
+- `Product.html`, `Product-Details.html`, `Deals.html`, `product-new.html` — searchable catalogue, product details, deals and new arrivals.
+- `Gallery.html` — glossy orange carousel strips, hover interactions and keyboard-operable lightbox with next/previous controls.
+- `Contact.html` — validated contact form, OpenStreetMap interactive map, local-area selector and accessibility hints.
+- `Enquiry.html` — product enquiry form with category, contact preference, validation and response.
+- `Cart.html`, `Wishlist.html`, `Checkout.html`, `Order-Confirmation.html` — shopping and order PDF.
+- `Track-Order.html`, `Account.html` — order progress and notifications (persistent with Supabase, demo locally).
+- `References.html` — Harvard-style documentation references.
 
-1. Extract the ZIP folder.
-2. Open `1Index.html` in a modern web browser.
-3. Navigate using the desktop navigation or the mobile menu.
-4. Registration, cart, wishlist and demo order data are stored in the browser's local storage. There is no production database or real payment gateway.
+## Functions and accessibility
+- Cart/wishlist browser storage; product filtering and live search; modal gallery; keyboard support; responsive layout; navigation and toasts.
+- Required form fields and HTML constraints (email/phone, lengths, consent where appropriate); additional per-field inline feedback with `aria-invalid` and `aria-live`.
+- Native OpenStreetMap iframe provides pan/zoom; area tabs select Durban city, Umhlanga and Ballito **map areas**; the map does *not* claim an exact shop address.
+- Images have text alternatives; page titles, meta descriptions and relevant meta keywords are included; account/private pages are marked noindex.
+- Reduced-motion support for animated gallery.
 
-## 4. Responsive design evidence
+## Verification and evidence
+See `RUBRIC-CHECKLIST.md`, `CHANGELOG.md`, `TEST-RESULTS.md`, and `REFERENCES.md` for evidence. The automated checks confirm static paths, filename safety and script syntax; manual browser testing on Netlify is still required for real submissions, Supabase login and email delivery.
 
-### Images — 5 marks
+## Development / GitHub workflow
+This ZIP does not contain fabricated GitHub history. For genuine descriptive commits, upload project files to your GitHub repository, then make *new actual changes* and commit with meaningful messages such as `docs: document POE criteria`, `fix: validate enquiry fields`, `feat: improve interactive map`. Preserve existing real commits if you already have them. Screenshots of GitHub commit history and your live Netlify URL should accompany your submission.
 
-Images use responsive rules such as `max-width: 100%` and `height: auto`. Product cards use `object-fit: contain` so product images remain visible without distortion. Product-detail images have a responsive maximum height. Image rules are applied globally and refined at mobile breakpoints.
+## Technologies
+HTML5; CSS3; vanilla JavaScript; Font Awesome classes from the original design; Google Fonts Poppins; OpenStreetMap; Netlify Forms; Supabase (optional secure accounts/orders); custom browser-side PDF generation in `js/slip.js`. See `REFERENCES.md` for documentation URLs.
 
-### Layout — 5 marks
+## Source code comments and student attribution
+- Every HTML page includes its purpose and commented document landmarks.
+- CSS, JavaScript, SQL, the Netlify configuration and favicon carry the student ID and name.
+- Comments beside important functions explain page rendering, validation, authentication, orders, PDF generation and tracking.
+- All customer-facing pages show the student ID and full name at the bottom of the footer.
+- The static references page also displays the name; the Netlify form definitions are a technical, hidden page.
+- `js/pdf-font.js` and `js/original-design.js` contain machine-generated/serialized data; their headers explain their purpose without changing those encoded payloads.
 
-The site uses flexible rows, responsive containers and a responsive product grid. Product cards use CSS Grid with four columns on wide screens, three on medium screens, two on smaller screens and one on very narrow screens. Forms wrap and the cart table is horizontally scrollable on small displays.
-
-### Typography — 5 marks
-
-Typography is controlled centrally in `style.css`. Heading sizes use `clamp()` so text scales between desktop and mobile sizes. Body text has a consistent line height, and mobile breakpoints reduce the base font size and heading dimensions for readability.
-
-### Navigation menu — 5 marks
-
-The navigation collapses below 800px. A native `<button>` opens and closes the menu, has an accessible label and `aria-expanded` state, and works with keyboard focus. The menu is full-width on mobile and remains a horizontal navigation on larger screens.
-
-## 5. Desktop CSS styling evidence
-
-### Typography styles — 5 marks
-
-`style.css` defines font family, heading hierarchy, font sizes, weights, line heights, link states, buttons and form typography.
-
-### Layout structure — 5 marks
-
-The stylesheet defines containers, rows, columns, product grids, cards, forms, footer columns and page-specific layouts using Flexbox and CSS Grid.
-
-### Decoration and colour — 5 marks
-
-The project uses a consistent KO TECH colour system based on the brand orange, neutral text, white surfaces, borders, shadows, rounded corners, hover states and gradients.
-
-### External stylesheet — 10 marks
-
-Every HTML page links to the same external `style.css`. Styling is not dependent on a page-specific CSS file. The previously duplicated unused `style NEW.css` file was removed to keep `style.css` as the single canonical stylesheet.
-
-### Default style code — 5 marks
-
-`style.css` begins with a CSS reset/default rules and establishes body font, colour, spacing, box sizing, links, paragraphs, headings, images and form controls. CSS variables provide a consistent default design system.
-
-## 6. GitHub and development record
-
-The supplied project includes a Git history with descriptive commits. The commit history is intended to be pushed to the student's GitHub repository so the assessor can inspect the development record directly.
-
-Suggested descriptive commits included in the project history are:
-
-1. `Initial KO TECH website structure and pages`
-2. `Add shared interactive site functionality and mobile menu support`
-3. `Improve responsive navigation accessibility and mobile layout`
-4. `Add rubric documentation and development evidence`
-5. `Final responsive image and layout validation`
-
-When submitting through GitHub, push the repository rather than uploading only individual files so that the commit history is preserved.
-
-## 7. Part 2 / feedback response
-
-Part 2 improvements are documented in `PART2-FEEDBACK.md`. The changes focus on responsive images, responsive layout, typography, mobile navigation, consistent external CSS, accessibility, documentation and functional JavaScript.
-
-## 8. References and assets
-
-Development references and external resources are listed in `REFERENCES.md`. Product images and other media are stored under the project `Images/` folder. The project does not claim ownership of third-party product imagery; such material is included for the academic demonstration website.
-
-## 9. Accessibility improvements
-
-- Semantic buttons are used for the mobile menu.
-- Navigation has `aria-label`.
-- Menu state is exposed with `aria-expanded`.
-- Images include alternative text where an image conveys information.
-- Keyboard focus styles are defined for links, buttons and form controls.
-- Form controls use labels/placeholders and required validation where appropriate.
-
-## 10. Validation checklist
-
-- [x] All HTML pages use the shared external `style.css`.
-- [x] All HTML pages contain a responsive viewport declaration.
-- [x] Images have responsive sizing rules.
-- [x] Product layout changes across desktop, tablet and mobile breakpoints.
-- [x] Typography scales at responsive breakpoints.
-- [x] Mobile navigation collapses and expands below 800px.
-- [x] `auth.js` is included and provides shared front-end functionality.
-- [x] README, changelog, references and Part 2 documentation are included.
-- [x] Git history contains descriptive development commits.
-
-## 11. Modern UI refinement
-
-The final presentation layer adds a cohesive modern visual system while preserving the original KO TECH content and page set. It uses CSS custom properties, responsive containers, rounded product surfaces, consistent spacing, accessible focus states, touch-friendly navigation, responsive product imagery, modern form controls, and reduced-motion support. These improvements directly reinforce the rubric categories for desktop styling, responsive layout, typography, images, navigation and external stylesheet implementation.
+Do not enter private Supabase service-role keys into client-side files. Real accounts and online order storage require the configuration described in `SETUP-ACCOUNTS.md`.
